@@ -140,7 +140,7 @@ main {
     margin-top: 10em;
 }
 
-.empty-page-text {
+.empty-page-text, .error-text {
     color: #d8d8d8;
     font-size: 1.5rem;
 }
@@ -287,7 +287,7 @@ main {
         height: 150px;
     }
 
-    .empty-page-text {
+    .empty-page-text, .error-text {
         font-size: 2rem;
     }
 

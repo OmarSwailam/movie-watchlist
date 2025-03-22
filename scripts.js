@@ -48,9 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (movieTitle) {
             const response = await fetch(`${BASE_URL}&s=${movieTitle}`);
             const data = await response.json()
-            const movies = data.Search.slice(0, 5)
-
-            main.innerHTML = await renderMovies(movies)
+            const movies = data.Search
+            if (movies) {
+                main.innerHTML = await renderMovies(movies.slice(0, 5))
+            } else {
+                main.innerHTML = `
+                    <p class="error-text">Unable to find what you’re looking for. Please try another search.</p>
+                `
+            }
         }
 
 
