@@ -134,14 +134,15 @@ main {
 }
 
 .empty-page-icon {
-    fill: #d8d8d8;
+    fill: #6B7280;
     width: 100px;
     height: 100px;
     margin-top: 10em;
 }
 
-.empty-page-text, .error-text {
-    color: #d8d8d8;
+.empty-page-text,
+.error-text {
+    color: #6B7280;
     font-size: 1.5rem;
 }
 
@@ -233,11 +234,17 @@ main {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
-.watchlist-btn:hover .plus-icon {
+.watchlist-btn:hover .plus-icon, .remove-icon {
     fill: #2563eb;
 }
 
-.plus-icon {
+.watchlist-btn:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.plus-icon, .remove-icon {
     width: 16px;
     height: 16px;
 }
@@ -287,7 +294,8 @@ main {
         height: 150px;
     }
 
-    .empty-page-text, .error-text {
+    .empty-page-text,
+    .error-text {
         font-size: 2rem;
     }
 
