@@ -17,12 +17,30 @@
 <body>
 
     <header>
+        <h1>Find your film</h1>
+        <a href="./watchlist.html">My Watchlist</a>
+        <form>
+            <div class="input-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#1f1f1f">
+                    <path
+                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                </svg>
 
+                <input type="text" name="title" placeholder="Search for a movie">
+            </div>
+            <button type="submit">Search</button>
+        </form>
     </header>
     <main>
-
+        <svg class="empty-page-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+            width="24px" fill="#1f1f1f">
+            <path
+                d="M160-120v-720h80v80h80v-80h320v80h80v-80h80v720h-80v-80h-80v80H320v-80h-80v80h-80Zm80-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm400 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80ZM400-200h160v-560H400v560Zm0-560h160-160Z" />
+        </svg>
+        <p class="empty-page-text">Start exploring</p>
     </main>
-    
+
     <script src="./scripts.js"></script>
 </body>
 
