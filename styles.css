@@ -7,6 +7,9 @@
 
 body {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -41,6 +44,20 @@ header a {
     color: #FFFFFF;
     text-decoration: none;
     margin-top: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header a:hover {
+    color: #2563eb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header a:focus {
+    outline: none;
+    color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
 form {
@@ -72,6 +89,7 @@ form input {
     font-size: 1rem;
     border: none;
     outline: none;
+    width: 100%;
 }
 
 form input::placeholder {
@@ -106,23 +124,127 @@ form button:hover {
 }
 
 main {
-    height: 75%;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
+    width: 90%;
 }
 
 .empty-page-icon {
     fill: #d8d8d8;
     width: 100px;
     height: 100px;
+    margin-top: 10em;
 }
 
 .empty-page-text {
     color: #d8d8d8;
     font-size: 1.5rem;
+}
+
+.movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em 0;
+    border-bottom: 1px solid #E5E7EB;
+    height: 300px;
+    gap: 2em;
+}
+
+.movie-poster {
+    width: 20%;
+}
+
+.movie-text-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.movie-title {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #000000;
+}
+
+.rating {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #111827;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    fill: #FFD700;
+}
+
+.movie-info {
+    width: 100%;
+    display: flex;
+    gap: 5em;
+}
+
+.runtime,
+.genre {
+    color: #111827;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0%;
+
+}
+
+.watchlist-btn {
+    border: none;
+    background-color: #FFFFFF;
+    color: #111827;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.watchlist-btn:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.watchlist-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.watchlist-btn:hover .plus-icon {
+    fill: #2563eb;
+}
+
+.plus-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.plot {
+    color: #6B7280;
+    max-width: 340px;
 }
 
 @media (min-width: 1024px) {
@@ -167,5 +289,52 @@ main {
 
     .empty-page-text {
         font-size: 2rem;
+    }
+
+    .movie {
+        padding: 2em 0;
+        height: 400px;
+    }
+
+    .movie-poster {
+        width: 15%;
+    }
+
+    .movie-text-container {
+        width: 85%;
+    }
+
+    .movie-title {
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
+
+    .rating {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .star-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .movie-info {
+        gap: 2em;
+    }
+
+    .runtime,
+    .genre {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .plot {
+        max-width: 600px;
+        font-size: 1rem;
+    }
+
+    .watchlist-btn {
+        font-size: 1rem;
     }
 }
